@@ -5,14 +5,26 @@
  */
 package com.mycompany.lp.exercicios;
 
+import java.util.Scanner;
+
 /**
  *
  * @author castr
  */
 public class exibirDivisores {
-    public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in){
-            
+    public static void Divisor(Integer numero){
+        for (int i = numero; i > 0; i--){
+            if(numero%i==0){
+                System.out.println(i);
+            }
         }
+    }
+    
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        Integer numero;
+        System.out.println("Digite um número");
+        numero = leitor.nextInt();
+        Divisor(numero);
     }
 }
