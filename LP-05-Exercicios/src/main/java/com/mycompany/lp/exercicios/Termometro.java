@@ -4,17 +4,26 @@
  * and open the template in the editor.
  */
 package com.mycompany.lp.exercicios;
+
+import java.util.Scanner;
+
 /**
  *
  * @author castr
  */
 public class Termometro { 
+    Double temperaturaAtual, temperaturaMax, temperaturaMin;
+    Scanner leitor = new Scanner(System.in);
     
-    public static void aumentaTemperatura(){
-        
+    public void aumentaTemperatura(Double temperatura){
+        if (temperatura > temperaturaMax){
+            temperaturaMax = temperatura;
+        }
     }
     
-    public static void diminuiTemperatura(){
-        
+    public void diminuiTemperatura(Double temperatura){
+        if (temperatura < temperaturaMin){
+            temperaturaMin = temperatura;
+        }
     }
 }
