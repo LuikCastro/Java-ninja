@@ -16,6 +16,8 @@ public class Termometro {
         if (temperaturaAtual > temperaturaMax){
             temperaturaMax = temperaturaAtual;
         }
+        System.out.println("Temperatura atual é: " + temperaturaAtual);
+        System.out.println("Temperatura Máxima é: " + temperaturaMax);
     }
     
     public void diminuiTemperatura(Double temperatura){
@@ -23,10 +25,12 @@ public class Termometro {
         if (temperaturaAtual < temperaturaMin){
             temperaturaMin = temperaturaAtual;
         }
+        System.out.println("Temperatura atual é: " + temperaturaAtual);
+        System.out.println("Temperatura Mínima é: " + temperaturaMin);
     }
     
     public void exibeFahreinheit (){
-        Double Fahreinheit = (temperaturaAtual * 9) / 5;
-        System.out.println("A temperatura atual em Fahreinheit é: " + Fahreinheit);
+        Double Fahreinheit = (temperaturaAtual * 1.8) + 32;
+        System.out.println(String.format("A temperatura atual em Fahreinheit é: %.2f", Fahreinheit));
     }
 }

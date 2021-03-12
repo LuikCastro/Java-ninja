@@ -5,20 +5,59 @@
  */
 package com.mycompany.lp.exercicios;
 
+import java.util.Scanner;
+
 /**
  *
  * @author castr
  */
 public class TesteTermometro {
     public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
         Termometro TermometroUm = new Termometro();
         
-        TermometroUm.temperaturaAtual = 24.0;
-        TermometroUm.temperaturaMax = 35.0;
-        TermometroUm.temperaturaMin = 18.0;
+        System.out.println("Digite a temperatura atual");
+        TermometroUm.temperaturaAtual = leitor.nextDouble();
         
-        TermometroUm.aumentaTemperatura(5.0);
-        TermometroUm.diminuiTemperatura(20.0);
+        System.out.println("Digite a temperatura máxima");
+        TermometroUm.temperaturaMax = leitor.nextDouble();
+        
+        System.out.println("Digite a temperatura mínima");
+        TermometroUm.temperaturaMin = leitor.nextDouble();
+        
+        System.out.println("Atual: " + TermometroUm.temperaturaAtual + "\nMáxima: " + TermometroUm.temperaturaMax + "\nMínima: " + TermometroUm.temperaturaMin);
+        
+        System.out.println("Digite um número para aumentar");
+        TermometroUm.aumentaTemperatura(leitor.nextDouble());
+        
+        System.out.println("Digite um número para diminuir");
+        TermometroUm.diminuiTemperatura(leitor.nextDouble());
+        
         TermometroUm.exibeFahreinheit();
+        
+        Termometro TermometroDois = new Termometro();
+        
+        System.out.println("Digite a temperatura atual");
+        TermometroDois.temperaturaAtual = leitor.nextDouble();
+        
+        System.out.println("Digite a temperatura atual");
+        TermometroDois.temperaturaAtual = leitor.nextDouble();
+        
+        System.out.println("Digite a temperatura máxima");
+        TermometroDois.temperaturaMax = leitor.nextDouble();
+        
+        System.out.println("Digite a temperatura mínima");
+        TermometroDois.temperaturaMin = leitor.nextDouble();
+        
+        System.out.println("Atual: " + TermometroUm.temperaturaAtual + "\nMáxima: " + TermometroUm.temperaturaMax + "\nMínima: " + TermometroUm.temperaturaMin);
+        
+        System.out.println("Digite um número para aumentar");
+        TermometroDois.aumentaTemperatura(leitor.nextDouble());
+        
+        System.out.println("Digite um número para diminuir");
+        TermometroDois.diminuiTemperatura(leitor.nextDouble());
+        
+        TermometroDois.exibeFahreinheit();
     }
 }
