@@ -12,8 +12,9 @@ public class Termometro {
     Double temperaturaAtual, temperaturaMax, temperaturaMin;
     
     public void aumentaTemperatura(Double temperatura){
-        if (temperatura > temperaturaMax){
-            temperaturaMax = temperatura;
+        temperaturaAtual = temperaturaAtual + temperatura;
+        if (temperaturaAtual > temperaturaMax){
+            temperaturaMax = temperaturaAtual;
         }
     }
     
