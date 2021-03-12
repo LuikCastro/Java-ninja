@@ -19,8 +19,9 @@ public class Termometro {
     }
     
     public void diminuiTemperatura(Double temperatura){
-        if (temperatura < temperaturaMin){
-            temperaturaMin = temperatura;
+        temperaturaAtual = temperaturaAtual - temperatura;
+        if (temperaturaAtual < temperaturaMin){
+            temperaturaMin = temperaturaAtual;
         }
     }
     
