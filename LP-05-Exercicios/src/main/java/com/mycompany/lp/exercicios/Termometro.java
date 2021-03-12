@@ -13,7 +13,6 @@ import java.util.Scanner;
  */
 public class Termometro { 
     Double temperaturaAtual, temperaturaMax, temperaturaMin;
-    Scanner leitor = new Scanner(System.in);
     
     public void aumentaTemperatura(Double temperatura){
         if (temperatura > temperaturaMax){
