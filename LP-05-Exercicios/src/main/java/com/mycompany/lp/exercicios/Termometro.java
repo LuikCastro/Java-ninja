@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package com.mycompany.lp.exercicios;
-
-import java.util.Scanner;
-
 /**
  *
  * @author castr
@@ -24,5 +21,10 @@ public class Termometro {
         if (temperatura < temperaturaMin){
             temperaturaMin = temperatura;
         }
+    }
+    
+    public void exibeFahreinheit (){
+        Double Fahreinheit = (temperaturaAtual * 9) / 5;
+        System.out.println("A temperatura atual em Fahreinheit é: " + Fahreinheit);
     }
 }
