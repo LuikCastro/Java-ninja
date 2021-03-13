@@ -16,14 +16,14 @@ public class Bolo {
     
     public void comprarBolo(Integer quantidadeBolo){
         Integer quantidadeValidacao = quantidadeVenda + quantidadeBolo;
-        if (quantidadeValidacao < 100){
+        if (quantidadeValidacao <= 100){
             quantidadeVenda += quantidadeBolo;
         }
         else{
             System.out.println("Seu pedido ultrapassou nosso limite diário para este bolo");
         }
     }
-    public void exibirRelatori(String sabor, Double valor, Integer quantidadeVenda){
-        System.out.println(String.format("O bolo de %s, foi comprado %d vezes, totalizando R$%.2f", sabor, quantidadeVenda, valor));
+    public void exibirRelatorio(){
+        System.out.println(String.format("O bolo de %s, foi comprado %d vezez hoje, totalizando R$%.2f ", sabor, quantidadeVenda, valor * quantidadeVenda));
     }
 }
