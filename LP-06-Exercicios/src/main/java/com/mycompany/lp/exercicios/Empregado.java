@@ -10,5 +10,15 @@ package com.mycompany.lp.exercicios;
  * @author castr
  */
 public class Empregado {
+    String nome;
+    String cargo;
+    Double salario;
     
+    public void reajustarSalario(Double reajuste){
+        salario += ((reajuste / 100) * salario); 
+    }
+    
+    public void exibirEmpregado(){
+        System.out.println(String.format("Nome: %s\n Cargo: %s\n Salário: %.2f", nome, cargo, salario));
+    }
 }
