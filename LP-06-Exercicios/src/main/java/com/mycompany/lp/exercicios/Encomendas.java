@@ -1,0 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.lp.exercicios;
+
+/**
+ *
+ * @author castr
+ */
+public class Encomendas {
+    Double altura;
+    Double largura;
+    String enderecoRemetente;
+    String enderecoDestinatario;
+    Double distancia;
+    Double valorEncomenda;
+}
