@@ -21,6 +21,9 @@ public class TesteEncomendas {
         encomendaUm.enderecoDestinatario = "Avenida Belmira marim número 5";
         encomendaUm.distancia = 20.00;
         encomendaUm.valorEncomenda = 60.00;
+        
+        encomendaUm.calcularFrete(encomendaUm.altura, encomendaUm.largura);
+        encomendaUm.emitirEtiqueta(encomendaUm.enderecoRemetente, encomendaUm.enderecoDestinatario, encomendaUm.altura, encomendaUm.largura, encomendaUm.valorEncomenda, encomendaUm.distancia);
     }
    
 }

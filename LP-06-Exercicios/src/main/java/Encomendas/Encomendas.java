@@ -49,11 +49,8 @@ public class Encomendas {
         System.out.println(String.format("Largura da encomenda: %.2fcm", largura));
         System.out.println("----------------------");
         System.out.println(String.format("Valor da encomenda: %.2fR$", valorEncomenda));
-        System.out.println(String.format("Valor do frete: %2fR$", calcularFrete(altura, largura)));
+        System.out.println(String.format("Valor do frete: %.2fR$", calcularFrete(altura, largura)));
         System.out.println("----------------------");
-        System.out.println(String.format("Valor total: ", valorEncomenda + calcularFrete(altura, largura)));
-        
+        System.out.println(String.format("Valor total: %.2fR$", valorEncomenda + calcularFrete(altura, largura)));
     }
 }
-// Não consegui finalizar o exercício 2, o enunciado estava sem a parte do exercutável.
-// O enunciado estava muito difícil de entender, parece que faltava coisas e o que tinha lá de informação estava insuficiente.
