@@ -3,17 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.lp.exercicios;
+package RecursosHumanos;
 
 /**
  *
  * @author castr
  */
-public class Encomendas {
-    Double altura;
-    Double largura;
-    String enderecoRemetente;
-    String enderecoDestinatario;
-    Double distancia;
-    Double valorEncomenda;
+public class Colaborador {
+    String nome;
+    String cargo;
+    Double salario;
 }
+
