@@ -27,6 +27,7 @@ public class Encomendas {
         }
         else if (altura > 0.00 && altura < 7.00 || largura > 0.00 && largura < 16.00){
             valorFinal = valorFinal + ((5 / 100) * valorEncomenda);
+            System.out.println(valorFinal);
         }
         
         if(distancia <= 50.00){
