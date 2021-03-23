@@ -67,8 +67,12 @@ public class UrnaEletronica {
         System.out.println("Total de votos: " + (getCandidatoUmVoto() + getCandidatoDoisVoto()));
         if(getCandidatoUmVoto() > getCandidatoDoisVoto()){
             System.out.println("Resultado: " + getCandidatoUmNome() + " venceu");
-        } else{
+        }
+        else if (getCandidatoUmVoto() < getCandidatoDoisVoto()){
             System.out.println("Resultado: " + getCandidatoDoisNome() + " venceu");
+        }
+        else{
+            System.out.println("Resultado: Empate!");
         }
     }
 }
