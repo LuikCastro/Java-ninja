@@ -50,23 +50,9 @@ public class Cachorro {
     
     public void Comer(String nomeComida, Double quantidadeKg){
         if (quantidadeKg > 0){
-            if ("Pequeno".equals(this.porte) && this.peso < 15.00){
-                System.out.println("Cão comeu " + quantidadeKg + "kg de " + nomeComida);
-                this.peso = this.peso + ((30 / 100) * quantidadeKg);
-            }
-            else{
-                System.out.println("Cão obeso demais, não vai aceitar a comida");
-            }
-            if ("Medio".equals(this.porte) && this.peso < 30.00){
-                System.out.println("Cão comeu " + quantidadeKg + "kg de " + nomeComida);
-                this.peso = this.peso + ((30 / 100) * quantidadeKg);
-            }
-            else{
-                System.out.println("Cão obeso demais, não vai aceitar a comida");
-            }
-            if ("Grande".equals(this.porte) && this.peso < 45.00){
-                System.out.println("Cão comeu " + quantidadeKg + "kg de " + nomeComida);
-                this.peso = this.peso + ((30 / 100) * quantidadeKg);
+            if ("Pequeno".equals(this.porte) && this.peso < 15.00 || "Medio".equals(this.porte) && this.peso < 30.00 || "Grande".equals(this.porte) && this.peso < 45.00){
+                System.out.println(this.apelido + " comeu " + quantidadeKg + "kg de " + nomeComida);
+                this.peso = this.peso + (0.3 * quantidadeKg);
             }
             else{
                 System.out.println("Cão obeso demais, não vai aceitar a comida");
