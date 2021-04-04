@@ -14,13 +14,28 @@ public class AppCachorro {
         Cachorro cachorro1 = new Cachorro();
         cachorro1.setApelido("Murphy");
         cachorro1.setPorte("Medio");
-        cachorro1.setPeso(20.00);
+        cachorro1.setPeso(29.00);
         
-        Cachorro cachorro2 = new Cachorro("Thor", "Pequeno", 4.00);
-        Cachorro cachorro3 = new Cachorro("Odin", "Grande", 35.00);
+        Cachorro cachorro2 = new Cachorro("Thor", "Pequeno", 13.00);
+        Cachorro cachorro3 = new Cachorro("Odin", "Grande", 42.00);
        
         
         cachorro1.Comer("Ração", 2.00);
-       
+        cachorro1.Comer("Ração", 5.00);
+        cachorro1.Comer("Ração", 2.00);
+        System.out.println("-----------------");
+        cachorro2.Comer("Ração", 3.00);
+        cachorro2.Comer("Ração", 4.00);
+        cachorro2.Comer("Ração", 3.00);
+        cachorro2.Comer("Ração", 3.00);
+        System.out.println("-----------------");
+        cachorro3.Comer("Ração", 6.00);
+        cachorro3.Comer("Ração", 5.00);
+        cachorro3.Comer("Ração", 2.00);
+        System.out.println("*****************");
+        System.out.println("Apelido: " + cachorro1.apelido + "\nPeso: " + cachorro1.peso);
+        System.out.println("Apelido: " + cachorro2.apelido + "\nPeso: " + cachorro2.peso);
+        System.out.println("Apelido: " + cachorro3.apelido + "\nPeso: " + cachorro3.peso);
+        
     }
 }
