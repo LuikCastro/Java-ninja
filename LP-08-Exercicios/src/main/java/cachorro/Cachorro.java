@@ -10,9 +10,9 @@ package cachorro;
  * @author castr
  */
 public class Cachorro {
-    String apelido;
-    String porte;
-    Double peso;
+    private String apelido;
+    private String porte;
+    private Double peso;
 
     public String getApelido() {
         return apelido;

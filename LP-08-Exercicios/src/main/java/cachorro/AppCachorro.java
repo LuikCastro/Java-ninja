@@ -33,9 +33,9 @@ public class AppCachorro {
         cachorro3.Comer("Ração", 5.00);
         cachorro3.Comer("Ração", 2.00);
         System.out.println("*****************");
-        System.out.println("Apelido: " + cachorro1.apelido + "\nPeso: " + cachorro1.peso);
-        System.out.println("Apelido: " + cachorro2.apelido + "\nPeso: " + cachorro2.peso);
-        System.out.println("Apelido: " + cachorro3.apelido + "\nPeso: " + cachorro3.peso);
+        System.out.println("Apelido: " + cachorro1.getApelido() + "\nPeso: " + cachorro1.getPeso());
+        System.out.println("Apelido: " + cachorro2.getApelido() + "\nPeso: " + cachorro2.getPeso());
+        System.out.println("Apelido: " + cachorro3.getApelido() + "\nPeso: " + cachorro3.getPeso());
         
     }
 }
