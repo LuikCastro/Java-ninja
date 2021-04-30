@@ -9,6 +9,7 @@ package celular;
  *
  * @author castr
  */
+
 public class Celular {
     private Integer bateria;
     
