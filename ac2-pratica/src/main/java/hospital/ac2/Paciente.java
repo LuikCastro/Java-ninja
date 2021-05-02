@@ -17,7 +17,7 @@ public class Paciente {
     private Boolean estaInternado;
     private Double valorCirurgia;
     private Double valorDiaria;
-    private Integer qtdDias;
+    private Integer qtdDiasInternado;
     private Boolean foiOperado;
 
     public Paciente() {
@@ -28,7 +28,7 @@ public class Paciente {
     }
 
     public Double calcularValorTotal() {
-        return (this.valorDiaria * this.qtdDias) + this.valorCirurgia;
+        return (this.valorDiaria * this.qtdDiasInternado) + this.valorCirurgia;
     }
 
     public Integer getIdPaciente() {
@@ -80,11 +80,11 @@ public class Paciente {
     }
 
     public Integer getQtdDias() {
-        return qtdDias;
+        return qtdDiasInternado;
     }
 
     public void setQtdDias(Integer qtdDias) {
-        this.qtdDias = qtdDias;
+        this.qtdDiasInternado = qtdDias;
     }
 
     public Boolean getFoiOperado() {
@@ -106,6 +106,14 @@ public class Paciente {
                 + "Valor diária: %.2f\n"
                 + "Quantidade de dias internado: %d\n"
                 + "Operado: %s",
-                this.idPaciente, this.nome, this.doenca, (this.estaInternado == true) ? "Sim" : "Não", this.valorCirurgia, this.valorDiaria, this.qtdDias, (this.foiOperado == true) ? "Sim" : "Não");
+                this.idPaciente,
+                this.nome,
+                this.doenca,
+                (this.estaInternado) ? "Sim" : "Não",
+                this.valorCirurgia,
+                this.valorDiaria,
+                this.qtdDiasInternado,
+                (this.foiOperado) ? "Sim" : "Não"
+        );
     }
 }

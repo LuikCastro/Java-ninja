@@ -96,6 +96,9 @@ public class Hospital {
                 + "Internações realizadas: %d\n"
                 + "Cirurgias realizadas: %d\n"
                 + "Altas realizados: %d",
-                this.internacoesRealizadas, this.cirurgiasRealizadas, this.altasRealizadas);
+                this.internacoesRealizadas,
+                this.cirurgiasRealizadas,
+                this.altasRealizadas
+        );
     }
 }
