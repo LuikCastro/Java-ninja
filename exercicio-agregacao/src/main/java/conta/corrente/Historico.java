@@ -5,9 +5,7 @@
  */
 package conta.corrente;
 
-import aluno.faculdade.Aluno;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.LocalDate;
 
 /**
  *
@@ -20,19 +18,10 @@ public class Historico {
     private Integer mes;
     private Integer ano;
     private String tipoOperacao;
-    
-    private List<Aluno> lista;
+    private LocalDate data;
 
-    public Historico(){
-        lista = new ArrayList();
-    }
-    
-    public void registrarOcorrencia(){
-        
-    }
-    
     public Double getValor() {
-        return valor; 
+        return valor;
     }
 
     public void setValor(Double valor) {
@@ -69,6 +58,25 @@ public class Historico {
 
     public void setTipoOperacao(String tipoOperacao) {
         this.tipoOperacao = tipoOperacao;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return  "\nValor: " + valor 
+                + "\nDia: " + dia
+                + "\nMes: " + mes
+                + "\nAno: " + ano
+                + "\nOperação: " + tipoOperacao
+                +"\n";
+        //return "Historico{" + "valor=" + valor + ", dia=" + dia + ", mes=" + mes + ", ano=" + ano + ", tipoOperacao=" + tipoOperacao + '}';
     }
 
 }
