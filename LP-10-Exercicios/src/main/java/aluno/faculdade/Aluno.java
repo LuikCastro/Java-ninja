@@ -54,6 +54,6 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "ra: " + ra + " nome:" + nome + " semestre:" + semestre + " ativo" + ativo;
+        return "ra: " + ra + " nome: " + nome + " semestre: " + semestre + " ativo: " + ativo;
     }
 }

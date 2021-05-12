@@ -5,7 +5,6 @@
  */
 package aluno.faculdade;
 
-import com.mycompany.exercicio.agregacao.Musica;
 import java.util.ArrayList;
 import java.util.List;
 

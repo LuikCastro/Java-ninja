@@ -76,7 +76,6 @@ public class Historico {
                 + "\nAno: " + ano
                 + "\nOperação: " + tipoOperacao
                 +"\n";
-        //return "Historico{" + "valor=" + valor + ", dia=" + dia + ", mes=" + mes + ", ano=" + ano + ", tipoOperacao=" + tipoOperacao + '}';
     }
 
 }

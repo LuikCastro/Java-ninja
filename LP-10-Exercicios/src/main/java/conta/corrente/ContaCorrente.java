@@ -50,6 +50,20 @@ public class ContaCorrente {
         historico.setDia(data.getDayOfMonth());
         this.lista.add(historico);
     }
+    
+    public void exibirExtrato(){
+        System.out.println("-------------------");
+        System.out.println("Nome do Titular: " + this.titular);
+        System.out.println("-------------------");
+        System.out.println("----- EXTRATO -----");
+        for(Historico historico : lista){
+            System.out.println("Operação: " + historico.getTipoOperacao());
+            System.out.println("Data: " + historico.getDia() + "/" + historico.getMes() + "/" + historico.getAno());
+            System.out.println(String.format("Valor: R$%.2f", historico.getValor()));
+            System.out.println("-------------------");
+        }
+        System.out.println(String.format("Saldo atual: R$%.2f", this.saldo));
+    }
 
     public String getTitular() {
         return titular;
@@ -73,7 +87,6 @@ public class ContaCorrente {
                 + "\nTitular: " + titular
                 + "\nSaldo: " + saldo
                 + "\nExtrato: " + lista;
-        //return "ContaCorrente{" + "titular=" + titular + ", saldo=" + saldo + ", extrato=" + lista + '}';
     }
 
 }

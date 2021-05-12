@@ -14,9 +14,12 @@ public class TesteContaCorrente {
     public static void main(String[] args) {
         ContaCorrente conta = new ContaCorrente("Luik");
 
-        conta.depositar(20.0);
-        conta.sacar(15.0);
-        System.out.println(conta);
+        conta.depositar(2600.0);
+        conta.sacar(2000.0);
+        conta.depositar(2600.0);
+        conta.depositar(2600.0);
+        conta.sacar(4000.0);
+        conta.exibirExtrato();
 
     }
 }
