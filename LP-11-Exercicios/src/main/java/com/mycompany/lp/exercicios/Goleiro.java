@@ -19,20 +19,20 @@ public class Goleiro extends Jogador {
         this.golsSofridos = 0;
         this.penaltisDefendidos = 0;
     }
-    
-    public void sofrerGol(){
+
+    public void sofrerGol() {
         this.golsSofridos++;
-        System.out.println("O goleiro: " + getNome() + " sofreu gol");
     }
-    
-    public void defenderPenalti(){
+
+    public void defenderPenalti() {
         this.penaltisDefendidos++;
-        System.out.println("O goleiro: " + getNome() + " defendeu o penalti");
     }
 
     @Override
     public String toString() {
-        return "Goleiro{" + "golsSofridos=" + golsSofridos + ", penaltisDefendidos=" + penaltisDefendidos + '}';
+        return "---" + getNome() + "---"
+                + "\nGols sofridos: " + golsSofridos
+                + "\nPenaltis defendidos: " + penaltisDefendidos
+                + "\n";
     }
-
 }

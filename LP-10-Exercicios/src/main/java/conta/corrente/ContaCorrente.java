@@ -41,7 +41,10 @@ public class ContaCorrente {
 
     public void sacar(Double valor) {
         if (valor > this.saldo){
-            System.out.println("Saldo insuficiente!");
+            System.out.println(String.format("=== OPERAÇÃO INVÁLIDA ==="
+                    + "\nNão foi possível efetuar o saque de R$%.2f"
+                    + "\nMotivo: Saldo insuficiente"
+                    + "\n=========================", valor));
         }
         Historico historico = new Historico();
         this.saldo = this.saldo - valor;

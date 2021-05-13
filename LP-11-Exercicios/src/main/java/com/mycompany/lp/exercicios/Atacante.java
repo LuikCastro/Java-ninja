@@ -19,20 +19,21 @@ public class Atacante extends Jogador {
         this.golsMarcados = 0;
         this.assistencias = 0;
     }
-    
-    public void marcarGol(){
+
+    public void marcarGol() {
         this.golsMarcados++;
-        System.out.println("Gol maracado pelo atacante: " + getNome());
     }
-    
-    public void darAssistencia(){
+
+    public void darAssistencia() {
         this.assistencias++;
-        System.out.println("Assitencia do atacante: " + getNome());
     }
 
     @Override
     public String toString() {
-        return "Atacante{" + "golsMarcados=" + golsMarcados + ", assistencias=" + assistencias + '}';
+        return "---" + getNome() + "---"
+                + "\nGols Marcados: " + golsMarcados
+                + "\nAssistencias: " + assistencias
+                + "\n";
     }
 
 }

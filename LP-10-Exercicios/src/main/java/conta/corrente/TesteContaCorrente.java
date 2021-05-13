@@ -15,7 +15,7 @@ public class TesteContaCorrente {
         ContaCorrente conta = new ContaCorrente("Luik");
 
         conta.depositar(2600.0);
-        conta.sacar(2000.0);
+        conta.sacar(2700.0);
         conta.depositar(2600.0);
         conta.depositar(2600.0);
         conta.sacar(4000.0);

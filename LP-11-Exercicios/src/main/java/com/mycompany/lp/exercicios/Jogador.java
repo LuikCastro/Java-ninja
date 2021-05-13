@@ -19,11 +19,6 @@ public class Jogador {
         this.numeroCamiseta = numeroCamiseta;
     }
 
-    @Override
-    public String toString() {
-        return "Jogador{" + "nome=" + nome + ", numeroCamiseta=" + numeroCamiseta + '}';
-    }
-
     public String getNome() {
         return nome;
     }
@@ -38,6 +33,13 @@ public class Jogador {
 
     public void setNumeroCamiseta(Integer numeroCamiseta) {
         this.numeroCamiseta = numeroCamiseta;
+    }
+
+    @Override
+    public String toString() {
+        return "---" + this.nome + "---"
+                + "\nNúmero camisa: " + this.numeroCamiseta
+                + "\n"; 
     }
 
 }
