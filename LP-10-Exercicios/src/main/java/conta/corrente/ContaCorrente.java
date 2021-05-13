@@ -40,6 +40,9 @@ public class ContaCorrente {
     }
 
     public void sacar(Double valor) {
+        if (valor > this.saldo){
+            System.out.println("Saldo insuficiente!");
+        }
         Historico historico = new Historico();
         this.saldo = this.saldo - valor;
         historico.setValor(valor);
