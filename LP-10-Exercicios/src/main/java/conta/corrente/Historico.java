@@ -18,7 +18,6 @@ public class Historico {
     private Integer mes;
     private Integer ano;
     private String tipoOperacao;
-    private LocalDate data;
 
     public Double getValor() {
         return valor;
@@ -60,22 +59,14 @@ public class Historico {
         this.tipoOperacao = tipoOperacao;
     }
 
-    public LocalDate getData() {
-        return data;
-    }
-
-    public void setData(LocalDate data) {
-        this.data = data;
-    }
-
     @Override
     public String toString() {
-        return  "\nValor: " + valor 
+        return "\nValor: " + valor
                 + "\nDia: " + dia
                 + "\nMes: " + mes
                 + "\nAno: " + ano
                 + "\nOperação: " + tipoOperacao
-                +"\n";
+                + "\n";
     }
 
 }

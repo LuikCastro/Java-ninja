@@ -40,29 +40,31 @@ public class ContaCorrente {
     }
 
     public void sacar(Double valor) {
-        if (valor > this.saldo){
+        if (valor > this.saldo) {
             System.out.println(String.format("=== OPERAÇÃO INVÁLIDA ==="
                     + "\nNão foi possível efetuar o saque de R$%.2f"
                     + "\nMotivo: Saldo insuficiente"
                     + "\n=========================", valor));
+        } else {
+            Historico historico = new Historico();
+            this.saldo = this.saldo - valor;
+            historico.setValor(valor);
+            historico.setTipoOperacao("sacar");
+            data = LocalDate.now();
+            historico.setAno(data.getYear());
+            historico.setMes(data.getMonthValue());
+            historico.setDia(data.getDayOfMonth());
+            this.lista.add(historico);
         }
-        Historico historico = new Historico();
-        this.saldo = this.saldo - valor;
-        historico.setValor(valor);
-        historico.setTipoOperacao("sacar");
-        data = LocalDate.now();
-        historico.setAno(data.getYear());
-        historico.setMes(data.getMonthValue());
-        historico.setDia(data.getDayOfMonth());
-        this.lista.add(historico);
+
     }
-    
-    public void exibirExtrato(){
+
+    public void exibirExtrato() {
         System.out.println("-------------------");
         System.out.println("Nome do Titular: " + this.titular);
         System.out.println("-------------------");
         System.out.println("----- EXTRATO -----");
-        for(Historico historico : lista){
+        for (Historico historico : lista) {
             System.out.println("Operação: " + historico.getTipoOperacao());
             System.out.println("Data: " + historico.getDia() + "/" + historico.getMes() + "/" + historico.getAno());
             System.out.println(String.format("Valor: R$%.2f", historico.getValor()));
