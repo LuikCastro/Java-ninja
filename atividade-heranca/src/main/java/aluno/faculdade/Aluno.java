@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package newpackage;
+package aluno.faculdade;
 
 /**
  *
@@ -22,10 +22,13 @@ public class Aluno {
         this.notaContinuada = notaContinuada;
         this.notaSemestral = notaSemestral;
     }
-
-    private String calcularMedia(Double nota1, Double nota2) {
-        Double media = (nota1 * 0.4) + (nota2 * 0.6);
-        return String.format("%.2f", media);
+    
+    public String tipoAluno(){
+        return "\n==== Aluno ====";
+    }
+    
+    public Double calcularMedia() {
+        return (this.notaContinuada * 0.4) + (this.notaSemestral * 0.6);
     }
 
     public String getRa() {
@@ -63,12 +66,13 @@ public class Aluno {
     @Override
     public String toString() {
         //return "Aluno{" + "ra=" + ra + ", nome=" + nome + ", notaContinuada=" + notaContinuada + ", notaSemestral=" + notaSemestral + '}';
-        return "=== ALUNO ==="
+        return  "\n"
+                + tipoAluno()
                 + "\nRa: " + ra
                 + "\nNome: " + nome
                 + "\nNota Continuada: " + notaContinuada
                 + "\nNota Semestral: " + notaSemestral
-                + "\nMédia: " + calcularMedia(this.notaContinuada, this.notaSemestral);
+                + "\nMédia: " + Double.valueOf(String.format("%.2f", calcularMedia()).replaceAll(",", "."));
     }
 
 }
