@@ -7,3 +7,4 @@
         // %s - para exibir texto (String)
         // %.2f - para exibir numeros reais com 2 casas decimais
         // %.1f - para exibir numeros reais com 1 casa decimal
+// A
